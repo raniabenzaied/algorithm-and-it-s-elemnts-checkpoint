@@ -1,0 +1,37 @@
+ALGORITHM sentence 
+VARIABLE 
+         str , vowel_list : STRING ;
+         x , vcount : INTEGER ;
+         arr : STRING ;
+BEGIN 
+Write ' input a sentence : ' ; 
+Read (str) ;
+
+FUNCTION countWords(str) : return_type
+
+BEGIN
+    const arr =: str.split(' ');
+  return arr.filter(word => word !== '').length;
+Read (countWords(str))
+END
+
+FUNCTION vowel_count(str) : 
+VAR
+    vowel_list : STRING ;
+    vcount : INTEGER
+BEGIN
+    FOR x=:0 , x < str.length ; x++ 
+        IF (vowel_list.indexOf(str[x]) !== -1) 
+        return vcount
+Read (vcount)
+        END_IF
+    END_FOR
+Read (vowel_count(str))
+END ALGORITHM 
+
+
+
+
+
+
+
