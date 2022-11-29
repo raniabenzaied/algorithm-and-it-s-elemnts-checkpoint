@@ -1,33 +1,40 @@
+
 ALGORITHM sentence 
 VARIABLE 
-         str , vowel_list : STRING ;
-         x , vcount : INTEGER ;
-         arr : STRING ;
+        str :STRING ;
+        length : INTEGER ;
 BEGIN 
-Write ' input a sentence : ' ; 
-Read (str) ;
-
-FUNCTION countWords(str) : return_type
-
-BEGIN
-    const arr =: str.split(' ');
-  return arr.filter(word => word !== '').length;
-Read (countWords(str))
+     write ('please write a sentence ');
+     read (str);
+     length:=str.length ;
+     read (length) ;
 END
-
-FUNCTION vowel_count(str) : 
-VAR
-    vowel_list : STRING ;
-    vcount : INTEGER
+ALGORITHM
+VARIABLE
+        countWords : INTEGER ;
 BEGIN
-    FOR x=:0 , x < str.length ; x++ 
-        IF (vowel_list.indexOf(str[x]) !== -1) 
-        return vcount
-Read (vcount)
-        END_IF
-    END_FOR
-Read (vowel_count(str))
-END ALGORITHM 
+     write ('please write a sentence ')
+     FOR i FROM 1 TO str.length STEP step  DO
+         IF (str[i]=' ') {
+             countWords =:countWords+1
+         }
+     END_FOR
+write ('your sentence contain ' ,countWords) 
+ALGORITHM vowel_count 
+VARIABLE
+        vowel_count :INTEGER ;
+        vowel_list : STRING ;
+BEGIN 
+     write('please write a sentence ')
+     read (str)
+     FOR i FROM 1 TO str.length STEP step  DO
+     FOR j FROM 1 TO vowel_list.length STEP step  DO
+         if (str[i]=vlist[j]){
+         vowelcount:=vowelcount+1} 
+     END_FOR
+     write ('your sentence contain 'vowel_count)
+
+ 
 
 
 
